@@ -1,0 +1,13 @@
+# Byte-compiled / optimized files
+__pycache__/
+
+# Distribution / packaging
+.Python
+build/
+dist/
+MANIFEST
+
+# Environments
+.env
+env/
+
