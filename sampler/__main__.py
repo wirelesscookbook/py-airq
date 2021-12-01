@@ -34,16 +34,15 @@ influx_db = None
 def main():
     """Invoke the parser"""
 
-    parser = argparse.ArgumentParser(description='Parse sds011 and bme680 sensor data to an InfluxDB instance.')
+    parser = argparse.ArgumentParser(description='Parse sds011 sensor data to an InfluxDB instance.')
     parser.add_argument('-p', '--port', help='SDS011 serial port', default='/dev/ttyS0')
     parser.add_argument('-i', '--influx', help='InfluxDB host', default='localhost')
     parser.add_argument('-d', '--database', help='InfluxDB database', default='pistation')
     parser.add_argument('-s', '--sds011_measurement', help='InfluxDB measurement for sds011 data', default='aq')
-    parser.add_argument('-l', '--location', help='InfluxDB tag for location')
-    parser.add_argument('-g', '--geohash', help='InfluxDB tag for geohash')
+    parser.add_argument('-l', '--location', help='InfluxDB tag for location', default='home')
+    parser.add_argument('-g', '--geohash', help='InfluxDB tag for geohash', default='gbsuv7s')
     parser.add_argument('-w', '--warmup', help='Warmup period for sds011, in seconds', type=int, default=20)
     parser.add_argument('-v', '--interval', help='Sample interval for sds011, in seconds', type=int, default=60)
-    parser.add_argument('-c', '--cycle', help='InfluxDB tag for geohash')
     args = parser.parse_args()
 
     global influx_db, influx_client
