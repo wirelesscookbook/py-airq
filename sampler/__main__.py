@@ -82,10 +82,10 @@ def main():
                 print("No response from SDS011 sensor")
             sensor011.sleep()
 
-           # warmup secs - Write sds010 and bme680 results
+            # write sds011 results
             influx_client.write_points(results, database=influx_db)
             
-            # warmup secs - wait for the bme680-only cycles
+            # warmup secs
             time.sleep(interval - warmup)
 
     except KeyboardInterrupt:
