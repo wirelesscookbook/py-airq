@@ -146,7 +146,7 @@
             {
               "key": "location",
               "operator": "=",
-              "value": "terrace"
+              "value": "home"
             }
           ]
         }
@@ -261,7 +261,7 @@
             {
               "key": "location",
               "operator": "=",
-              "value": "terrace"
+              "value": "home"
             }
           ]
         }
@@ -379,7 +379,7 @@
             {
               "key": "location",
               "operator": "=",
-              "value": "terrace"
+              "value": "home"
             }
           ]
         }
@@ -499,7 +499,7 @@
             {
               "key": "location",
               "operator": "=",
-              "value": "terrace"
+              "value": "home"
             }
           ]
         }
@@ -523,5 +523,5 @@
   "timezone": "",
   "title": "Pi Air Quality Monitoring Station",
   "uid": "HQZtk3zgz",
-  "version": 3
+  "version": 4
 }
