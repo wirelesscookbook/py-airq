@@ -18,7 +18,7 @@
       }
     ]
   },
-  "description": "A Raspberry Pi Zero 2 W based monitoring station. Wi-Fi Cookbook https://wificookbook.com/",
+  "description": "A Raspberry Pi Zero 2 W based monitoring station. The Linux Wireless Cookbook https://wirelesscookbook.com/",
   "editable": true,
   "fiscalYearStartMonth": 0,
   "gnetId": null,
@@ -32,10 +32,10 @@
       "keepTime": false,
       "tags": [],
       "targetBlank": true,
-      "title": "Wi-Fi Cookbook",
+      "title": "The Linux Wireless Cookbook",
       "tooltip": "",
       "type": "link",
-      "url": "https://wificookbook.com/"
+      "url": "https://wirelesscookbook.com"
     }
   ],
   "liveNow": false,
