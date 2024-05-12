@@ -1,0 +1,18 @@
+# Source: The Linux Wireless Cookbook
+# URL: https://wirelesscookbook.com
+# Author: BillZ <billzimmerman@gmail.com>
+[Unit]
+Description=Python Sampler Service for the Nova SDS011
+After=network.target
+
+[Service]
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/py-airq
+Environment="GEOHASH=ge2kv5h"
+ExecStart=/home/pi/py-airq/env/bin/python -m sampler --port /dev/ttyS0 --influx localhost --database pistation --sds011_measurement aq --location home --geohash=$GEOHASH
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+Alias=py-airq.service
