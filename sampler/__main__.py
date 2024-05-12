@@ -26,6 +26,11 @@ import time
 from influxdb import InfluxDBClient
 from datetime import datetime, timezone
 
+#from Adafruit_IO import Client
+#ADAFRUIT_AIO_USERNAME = "my-aio-username"
+#ADAFRUIT_AIO_KEY      = "my-aio-key"
+#aio = Client(ADAFRUIT_AIO_USERNAME, ADAFRUIT_AIO_KEY)
+
 from . import SDS011
 
 influx_client = None
@@ -82,9 +87,21 @@ def main():
                 print("No response from SDS011 sensor")
             sensor011.sleep()
 
-            # write sds011 results
+            # write sds011 results to InfluxDB
             influx_client.write_points(results, database=influx_db)
-            
+
+            # set up location metadata
+            #location_meta = {
+            #    "lat": 64.1334735,
+            #    "lon": -21.922653,
+            #    "ele": 12,
+            #    "created_at": ts
+            }
+
+            # send sds011 results to Adafruit IO
+            #aio.send('pistation25',pm25,location_meta)
+            #aio.send('pistation10',pm100,location_meta)
+
             # warmup secs
             time.sleep(interval - warmup)
 
