@@ -10,7 +10,7 @@ User=pi
 Group=pi
 WorkingDirectory=/home/pi/py-airq
 Environment="GEOHASH=ge2kv5h"
-ExecStart=/home/pi/py-airq/env/bin/python -m sampler --port /dev/ttyS0 --influx localhost --database pistation --sds011_measurement aq --location home --geohash=$GEOHASH
+ExecStart=/home/pi/py-airq/env/bin/python -m sampler --port /dev/ttyS0 --influx localhost --database pistation --sds011_measurement aq --location home --geohash $GEOHASH
 Restart=always
 
 [Install]
